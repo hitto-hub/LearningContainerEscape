@@ -1,7 +1,7 @@
 services:
   ubuntu:
     image: ubuntu:latest
-    container_name: step1
+    container_name: step0
     stdin_open: true
     tty: true
     volumes:
@@ -11,4 +11,3 @@ services:
       - LANG=C.UTF-8
       - TZ=Asia/Tokyo
     entrypoint: ["/bin/bash"]
-    privileged: true

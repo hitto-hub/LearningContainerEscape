@@ -1,11 +1,12 @@
 services:
   ubuntu:
     image: ubuntu:latest
-    container_name: step1
+    container_name: step2
     stdin_open: true
     tty: true
     volumes:
       - ./:/home/ubuntu/workspace
+      - /var/run/docker.sock:/var/run/docker.sock
     working_dir: /home/ubuntu/workspace
     environment:
       - LANG=C.UTF-8
