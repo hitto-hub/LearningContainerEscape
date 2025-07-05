@@ -1,0 +1,13 @@
+services:
+  ubuntu:
+    image: ubuntu:latest
+    container_name: ubuntu_latest
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/home/ubuntu/workspace
+    working_dir: /home/ubuntu/workspace
+    environment:
+      - LANG=C.UTF-8
+      - TZ=Asia/Tokyo
+    entrypoint: ["/bin/bash"]
